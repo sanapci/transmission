@@ -1,0 +1,16 @@
+{
+  "dependencies": [
+    "curl",
+    "openssl",
+    "qtsvg",
+    "qttools",
+    "zlib",
+    "qtactiveqt"
+  ],
+  "overrides": [
+    {
+      "name": "curl",
+      "version": "7.88.1"
+    }
+  ]
+}
