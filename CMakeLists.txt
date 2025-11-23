@@ -41,7 +41,7 @@ include(ExternalProject)
 include(GNUInstallDirs)
 include(TrMacros)
 
-set(CURL_MINIMUM 7.28.0)
+set(CURL_MINIMUM 7.88.1)
 set(WOLFSSL_MINIMUM 3.4)
 set(DEFLATE_MINIMUM 1.7)
 set(EVENT2_MINIMUM 2.1.0)
