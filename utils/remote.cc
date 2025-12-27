@@ -1443,7 +1443,7 @@ void print_peers_impl(tr_variant::Vector const& peers)
         if (address && client && progress && flagstr && rate_to_client && rate_to_peer)
         {
             fmt::print(
-                "{:<40s}  {:<12s}  {:<5s} {:6.1f}  {:6.1f}  {:s}\n",
+                "{:<40s}  {:<12s}  {:<5s} {:6.0f}  {:6.0f}  {:s}\n",
                 *address,
                 *flagstr,
                 strlpercent(*progress * 100.0),
@@ -1624,7 +1624,7 @@ void print_torrent_list(tr_variant::Map const& result)
             std::string{ "n/a" };
 
         fmt::print(
-            "{:>6d}{:c}  {:>5s}  {:>9s}  {:<9s}  {:6.1f}  {:6.1f}  {:>5s}  {:<11s}  {:<s}\n",
+            "{:>6d}{:c}  {:>5s}  {:>9s}  {:<9s}  {:6.0f}  {:6.0f}  {:>5s}  {:<11s}  {:<s}\n",
             *o_tor_id,
             error_mark,
             done_str,
@@ -1642,7 +1642,7 @@ void print_torrent_list(tr_variant::Map const& result)
     }
 
     fmt::print(
-        "Sum:            {:>9s}             {:6.1f}  {:6.1f}\n",
+        "Sum:            {:>9s}             {:6.0f}  {:6.0f}\n",
         strlsize(total_size).c_str(),
         Speed{ total_up, Speed::Units::Byps }.count(Speed::Units::KByps),
         Speed{ total_down, Speed::Units::Byps }.count(Speed::Units::KByps));
